@@ -1,38 +1,21 @@
+# frozen_string_literal: true
+
 require 'test_helper'
 
 class VenuesControllerTest < ActionDispatch::IntegrationTest
+  @memory_store = ActiveSupport::Cache.lookup_store(:memory_store)
+  @httparty = HTTParty
+
   setup do
-    @venue = venues(:one)
+    allow(Rails).to receive(:cache).and_return(memory_store)
+    Rails.cache.clear
   end
 
-  test "should get index" do
+  test '#index fetches from cache' do
+    allow(Rails.cache).to receive(:read).with('location:vancouver').and_return(nil)
+    allow(@httparty).to receive(:get).and_return([])
+    allow(Rails.cache).to receive(:write).with('location:vancouver', [])
+
     get venues_url, as: :json
-    assert_response :success
-  end
-
-  test "should create venue" do
-    assert_difference('Venue.count') do
-      post venues_url, params: { venue: {  } }, as: :json
-    end
-
-    assert_response 201
-  end
-
-  test "should show venue" do
-    get venue_url(@venue), as: :json
-    assert_response :success
-  end
-
-  test "should update venue" do
-    patch venue_url(@venue), params: { venue: {  } }, as: :json
-    assert_response 200
-  end
-
-  test "should destroy venue" do
-    assert_difference('Venue.count', -1) do
-      delete venue_url(@venue), as: :json
-    end
-
-    assert_response 204
   end
 end
