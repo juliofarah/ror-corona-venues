@@ -5,7 +5,7 @@ class VenuesController < ApplicationController
 
   # GET /venues
   def index
-    fetch_by_location(params['location'])
+    render json: fetch_by_location(params['location'])
   end
 
   private
@@ -15,7 +15,7 @@ class VenuesController < ApplicationController
     unless cached.nil?
       # TODO: increase successful cache hit stats
       Rails.logger.info 'cache hit'
-      cached
+      return cached
     end
 
     fetch_from_remote(location)

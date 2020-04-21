@@ -1,0 +1,120 @@
+{
+  "meta": {
+    "code": 200,
+    "requestId": "5e9e66157828ae001bbd5d10"
+  },
+  "response": {
+    "suggestedFilters": {
+      "header": "Tap to show:",
+      "filters": [
+        {
+          "name": "Open now",
+          "key": "openNow"
+        }
+      ]
+    },
+    "geocode": {
+      "what": "",
+      "where": "vancouver",
+      "center": {
+        "lat": 49.24966,
+        "lng": -123.11934
+      },
+      "displayString": "Vancouver, BC, Canada",
+      "cc": "CA",
+      "geometry": {
+        "bounds": {
+          "ne": {
+            "lat": 49.31439002686205,
+            "lng": -123.02296611995233
+          },
+          "sw": {
+            "lat": 49.19840801038309,
+            "lng": -123.22524087683938
+          }
+        }
+      },
+      "slug": "vancouver-british-columbia-canada",
+      "longId": "72057594044101267"
+    },
+    "warning": {
+      "text": "There aren't a lot of results for \"groceries.\" Try something more general, reset your filters, or expand the search area."
+    },
+    "headerLocation": "Vancouver",
+    "headerFullLocation": "Vancouver",
+    "headerLocationGranularity": "city",
+    "query": "groceries",
+    "totalResults": 161,
+    "suggestedBounds": {
+      "ne": {
+        "lat": 49.24970538494773,
+        "lng": -123.06890344551863
+      },
+      "sw": {
+        "lat": 49.24700572516228,
+        "lng": -123.07403771385404
+      }
+    },
+    "groups": [
+      {
+        "type": "Recommended Places",
+        "name": "recommended",
+        "items": [
+          {
+            "reasons": {
+              "count": 0,
+              "items": [
+                {
+                  "summary": "This spot is popular",
+                  "type": "general",
+                  "reasonName": "globalInteractionReason"
+                }
+              ]
+            },
+            "venue": {
+              "id": "4aa81b5cf964a5205c4f20e3",
+              "name": "Famous Foods",
+              "location": {
+                "address": "1595 Kingsway",
+                "crossStreet": "Perry St",
+                "lat": 49.24835555505501,
+                "lng": -123.07147057968633,
+                "labeledLatLngs": [
+                  {
+                    "label": "display",
+                    "lat": 49.24835555505501,
+                    "lng": -123.07147057968633
+                  }
+                ],
+                "postalCode": "V5N 2R8",
+                "cc": "CA",
+                "city": "Vancouver",
+                "state": "BC",
+                "country": "Canada",
+                "formattedAddress": [
+                  "1595 Kingsway (Perry St)",
+                  "Vancouver BC V5N 2R8",
+                  "Canada"
+                ]
+              },
+              "categories": [
+                {
+                  "id": "4bf58dd8d48988d118951735",
+                  "name": "Grocery Store",
+                  "pluralName": "Grocery Stores",
+                  "shortName": "Grocery Store",
+                  "icon": {
+                    "prefix": "https://ss3.4sqi.net/img/categories_v2/shops/food_grocery_",
+                    "suffix": ".png"
+                  },
+                  "primary": true
+                }
+              ]
+            },
+            "referralId": "e-0-4aa81b5cf964a5205c4f20e3-0"
+          }
+        ]
+      }
+    ]
+  }
+}
