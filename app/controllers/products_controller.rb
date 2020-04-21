@@ -5,17 +5,7 @@ class ProductsController < ApplicationController
 
   # GET /products
   def index
-    query = '1 = 1'
-    params.except(:action, :controller).each do |key|
-      query += " AND #{key[0]} = #{key[1]}".gsub('"', "\'")
-    end
-
-    @products = if params[:status] || params[:venue_id] || params[:name]
-                  Product.where(query)
-                else
-                  Product.all
-                end
-
+    @products = Product.filter(params)
     render json: @products
   end
 
