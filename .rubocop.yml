@@ -6,3 +6,8 @@ Metrics/MethodLength:
 
 Layout/LineLength:
   Enabled: false
+
+Metrics/BlockLength:
+  Enabled: true
+  Exclude:
+    - spec/**/*
